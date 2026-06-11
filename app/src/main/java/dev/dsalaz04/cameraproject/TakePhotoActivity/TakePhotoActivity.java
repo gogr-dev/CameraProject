@@ -1,12 +1,12 @@
-package edu.csce4623.ahnelson.cameraproject.TakePhotoActivity;
+package dev.gogrdev.cameraproject.TakePhotoActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import edu.csce4623.ahnelson.cameraproject.R;
-import edu.csce4623.ahnelson.cameraproject.data.CommentedPhotoDataSource;
-import edu.csce4623.ahnelson.cameraproject.data.CommentedPhotoRepository;
+import dev.gogrdev.cameraproject.R;
+import dev.gogrdev.cameraproject.data.CommentedPhotoDataSource;
+import dev.gogrdev.cameraproject.data.CommentedPhotoRepository;
 import util.AppExecutors;
 
 public class TakePhotoActivity extends AppCompatActivity {

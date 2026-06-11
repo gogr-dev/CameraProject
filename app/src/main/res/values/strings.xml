@@ -1,6 +1,22 @@
 <resources>
     <string name="app_name">CameraProject</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
     <string name="add_photo">Add Photo</string>
+    <string name="photo_thumbnail">Photo thumbnail</string>
+
+    <!-- Comment dialog -->
+    <string name="add_comment_title">Add a comment</string>
+    <string name="comment_hint">Say something about this photo…</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+
+    <!-- Feedback -->
+    <string name="photo_saved">Photo saved (id %1$d)</string>
+
+    <!-- Delete dialog -->
+    <string name="delete_photo_title">Delete photo?</string>
+    <string name="delete_photo_message">This removes the photo from the map.</string>
+    <string name="delete">Delete</string>
+    <string name="photo_deleted">Photo deleted</string>
+    <string name="photo_delete_failed">Could not delete photo</string>
 </resources>

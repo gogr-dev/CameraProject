@@ -1,4 +1,4 @@
-package edu.csce4623.ahnelson.cameraproject.data;
+package dev.gogrdev.cameraproject.data;
 
 import androidx.annotation.NonNull;
 

@@ -1,14 +1,16 @@
 plugins {
-    id 'com.android.application'
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.secrets)
 }
 
 android {
-    compileSdk 30
+    namespace 'dev.gogrdev.cameraproject'
+    compileSdk 34
 
     defaultConfig {
-        applicationId "edu.csce4623.ahnelson.cameraproject"
+        applicationId "dev.gogrdev.cameraproject"
         minSdk 25
-        targetSdk 30
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 
@@ -22,30 +24,36 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 
-    buildFeatures{
+    buildFeatures {
         viewBinding true
     }
 }
 
+// Injects MAPS_API_KEY (from secrets.properties, falling back to local.defaults.properties)
+// as a manifest placeholder, so the real key never lives in version-controlled source.
+secrets {
+    propertiesFileName = "secrets.properties"
+    defaultPropertiesFileName = "local.defaults.properties"
+}
+
 dependencies {
+    implementation libs.androidx.appcompat
+    implementation libs.material
+    implementation libs.androidx.constraintlayout
+    implementation libs.androidx.activity
+    implementation libs.androidx.fragment
 
-    implementation 'androidx.appcompat:appcompat:1.3.1'
-    implementation 'com.google.android.material:material:1.4.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.1'
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'androidx.room:room-common:2.4.0-alpha04'
-    implementation 'androidx.room:room-runtime:2.4.0-alpha04'
-    implementation 'com.google.android.gms:play-services-location:18.0.0'
-    implementation 'com.google.android.gms:play-services-maps:17.0.0'
-    implementation 'com.google.firebase:firebase-inappmessaging:19.1.5'
-    testImplementation 'junit:junit:4.+'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
-    annotationProcessor 'androidx.room:room-compiler:2.4.0-alpha04'
-    implementation 'com.android.support:support-v4:23.1.1'
+    implementation libs.room.runtime
+    annotationProcessor libs.room.compiler
 
+    implementation libs.play.services.location
+    implementation libs.play.services.maps
+
+    testImplementation libs.junit
+    androidTestImplementation libs.androidx.junit
+    androidTestImplementation libs.androidx.espresso.core
 }

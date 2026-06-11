@@ -1,4 +1,4 @@
-package edu.csce4623.ahnelson.cameraproject.data;
+package dev.gogrdev.cameraproject.data;
 
 
 import androidx.room.ColumnInfo;
@@ -13,6 +13,7 @@ public class CommentedPhoto {
     public static final String COMMENTEDPHOTO_ID = "id";
     public static final String COMMENTEDPHOTO_LAT = "latitude";
     public static final String COMMENTEDPHOTO_LONG = "longitude";
+    public static final String COMMENTEDPHOTO_TIMESTAMP = "timestamp";
 
     @PrimaryKey(autoGenerate = true)
     private Integer id;
@@ -45,8 +46,16 @@ public class CommentedPhoto {
     @ColumnInfo(name = COMMENTEDPHOTO_LONG)
     private Double longitude;
 
+    @ColumnInfo(name = COMMENTEDPHOTO_TIMESTAMP)
+    private Long timestamp;
 
+    public Long getTimestamp() {
+        return timestamp;
+    }
 
+    public void setTimestamp(Long timestamp) {
+        this.timestamp = timestamp;
+    }
 
     public Integer getId() {
         return id;

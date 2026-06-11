@@ -1,50 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="#E2E2E2"
-    android:weightSum="100"
-    android:minWidth="700px">
+    android:padding="8dp"
+    android:background="#FFFFFF">
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginEnd="200dp"
-        android:layout_weight="50"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:id="@+id/imgPhoto"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/photo_thumbnail"
+        android:src="@drawable/ic_launcher_foreground" />
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="210dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:orientation="vertical"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:gravity="center_vertical">
 
         <TextView
             android:id="@+id/imgName"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Name"
-            android:gravity="center"/>
+            android:textStyle="bold"
+            android:maxWidth="220dp"
+            tools:ignore="HardcodedText"
+            android:text="Name" />
 
         <TextView
             android:id="@+id/imgTimeStamp"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Time Stamp"
-            android:gravity="center"/>
+            android:textSize="12sp"
+            tools:ignore="HardcodedText"
+            android:text="Time Stamp" />
 
         <TextView
             android:id="@+id/imgLocation"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Location"
-            android:gravity="center" />
+            android:textSize="12sp"
+            tools:ignore="HardcodedText"
+            android:text="Location" />
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

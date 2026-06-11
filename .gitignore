@@ -1,0 +1,22 @@
+# Built application files / Gradle
+*.apk
+*.aar
+*.ap_
+*.aab
+.gradle/
+build/
+/app/build/
+/captures
+.externalNativeBuild
+.cxx
+
+# Local configuration / secrets (must not be committed)
+local.properties
+secrets.properties
+
+# IDE
+*.iml
+.idea/
+
+# OS
+.DS_Store

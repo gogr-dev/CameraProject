@@ -1,4 +1,4 @@
-package edu.csce4623.ahnelson.cameraproject;
+package dev.gogrdev.cameraproject;
 
 import org.junit.Test;
 
